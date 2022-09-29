@@ -11,9 +11,11 @@ function DogPics() {
       .then((r) => r.json())
       .then((data) => {
         console.log("setState");
+
+        // setting state in the useEffect callback
         setImages(data.message);
       });
-  });
+  }, []);
 
   console.log("render");
 
